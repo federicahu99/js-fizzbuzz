@@ -5,8 +5,6 @@
 4-Stampare FizzBuzz al posto dei multipli sia di 3 e 5.
 */
 
-const tableOfNumbers = document.getElementById('table')
-
 for (let i = 1; i <= 100; i++) { //generatore da 1 a 100
     
     if ( i % 3 ==0 & i % 5 == 0) { //stampa FizzBuzz per i multipli di 3 e 5
@@ -16,5 +14,4 @@ for (let i = 1; i <= 100; i++) { //generatore da 1 a 100
     }  else if( i % 3 == 0) { //stampa Fizz per i multipli di 3
         console.log('Fizz');
     } else { console.log(i) } //stampo i numeri non multipli di 3 o 5
-
 }
