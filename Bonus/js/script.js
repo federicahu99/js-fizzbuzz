@@ -13,18 +13,21 @@ let number ='<ul>'
 
 for (let i = 1; i <= 100; i++) { //generatore da 1 a 100
     
-    if ( i % 3 ==0 & i % 5 == 0) { //stampa FizzBuzz per i multipli di 3 e 5
+    if ( i % 3 ==0 && i % 5 == 0) { //stampa FizzBuzz per i multipli di 3 e 5
         console.log('FizzBuzz');
+        number += `<li class="color-fb"> FizzBuzz </li>`
     }  else if( i % 5 == 0) { //stampa Buzz per i multipli di 5
         console.log('Buzz');
+        number += `<li class="color-b"> Buzz </li>`
     }  else if( i % 3 == 0) { //stampa Fizz per i multipli di 3
         console.log('Fizz');
-    } else { console.log(i) } //stampo i numeri non multipli di 3 o 5
-     
-    number += `<li> ${i} </li>`
+        number += `<li class="color-f"> Fizz </li>`
+    } else {
+        console.log(i);
+         number += `<li class="color"> ${i} </li>` 
+        } //stampo i numeri non multipli di 3 o 5
 }
 
 /* Trasporto gli elementi al DOM */
 
-tableOfNumbers.innerHTML = number;
-console.log(number);
+tableOfNumbers.innerHTML = number + '</ul>';
