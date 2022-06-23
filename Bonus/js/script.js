@@ -3,10 +3,13 @@
 2-Stampare Fizz al posto di 3 e multipli.
 3-Stampare Buzz al posto di 5 e multipli.
 4-Stampare FizzBuzz al posto dei multipli sia di 3 e 5.
+BONUS:
+5-portare gli elementi nel DOM
 */
 
 /* Prendo contenitore dal Dom */
 let tableOfNumbers = document.getElementById('table');
+let number ='<ul>'
 
 for (let i = 1; i <= 100; i++) { //generatore da 1 a 100
     
@@ -17,8 +20,11 @@ for (let i = 1; i <= 100; i++) { //generatore da 1 a 100
     }  else if( i % 3 == 0) { //stampa Fizz per i multipli di 3
         console.log('Fizz');
     } else { console.log(i) } //stampo i numeri non multipli di 3 o 5
+     
+    number += `<li> ${i} </li>`
 }
 
 /* Trasporto gli elementi al DOM */
 
-tableOfNumbers.innertext = i;
+tableOfNumbers.innerHTML = number;
+console.log(number);
